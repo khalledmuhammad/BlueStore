@@ -18,10 +18,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Blue stock</title>
+    <title>Blue store</title>
   </head>
   <body>
-    <div class="home">
+    <div class="home h-100">
       <img src="img/bgRight.png" alt="logo" class="BG_image" />
       <nav class="row navbar align-items-center">
         <div class="nav-logo col-sm-3">
@@ -39,40 +39,12 @@
           <span class="bar"></span>
         </div>
         <div class="mobNav">
-          <a
-            class="nav-link active"
-            id="home"
-            data-toggle="tab"
-            href="#"
-            role="tab"
-          >
-            Home
-          </a>
-          <a
-            class="nav-link active"
-            id="Products"
-            data-toggle="tab"
-            href="#Products"
-            role="tab"
-          >
+          <a class="nav-link active" id="home" href="#"> Home </a>
+          <a class="nav-link active" id="Products" href="#products">
             Products
           </a>
-          <a
-            class="nav-link active"
-            id="AboutUs"
-            data-toggle="tab"
-            href="#AboutUs"
-            role="tab"
-          >
-            About Us
-          </a>
-          <a
-            class="nav-link active"
-            id="ContactUs"
-            data-toggle="tab"
-            href="#ContactUs"
-            role="tab"
-          >
+          <a class="nav-link active" id="AboutUs" href="#aboutUs"> About Us </a>
+          <a class="nav-link active" id="ContactUs" href="#contactUs">
             ContactUs
           </a>
           <div class="d-flex flex-row justify-content-around mt-2">
@@ -81,8 +53,22 @@
               alt="search"
               class="image-icon"
             />
-            <img src="img/Icons/CartIcon.png" alt="cart" class="image-icon" />
-            <img src="img/Icons/FavIcon.png" alt="heart" class="image-icon" />
+            <div class="dropdown">
+              <img src="img/Icons/CartIcon.png" alt="cart" class="image-icon" />
+
+              <div
+                class="dropdown-content d-flex flex-column CartModal"
+                style="color: #0038ff; font-size: 15px; width: 50vw"
+              ></div>
+            </div>
+
+            <div class="dropdown">
+              <img src="img/Icons/FavIcon.png" alt="heart" class="image-icon" />
+              <div
+                class="dropdown-content d-flex flex-column FavModal"
+                style="color: #0038ff; font-size: 15px; width: 50vw"
+              ></div>
+            </div>
           </div>
           <div class="d-flex flex-row justify-content-around mt-3 mb-3">
             <div class="dropdown">
@@ -119,25 +105,11 @@
         <div class="nav-links col-sm-6">
           <ul class="nav d-flex justify-content-center mt-4">
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                id="home"
-                data-toggle="tab"
-                href="#"
-                role="tab"
-              >
-                Home
-              </a>
+              <a class="nav-link active" id="home" href="#"> Home </a>
             </li>
             <li class="nav-item">
               <div class="dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  data-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
+                <a class="nav-link dropdown-toggle" href="#products"
                   >Products</a
                 >
                 <div class="dropdown-content" style="width: 200px">
@@ -148,31 +120,15 @@
               </div>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                id="AboutUs"
-                data-toggle="tab"
-                href="#AboutUs"
-                role="tab"
-              >
-                About Us
-              </a>
+              <a class="nav-link" href="#aboutUs"> About Us </a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                id="ContactUs"
-                data-toggle="tab"
-                href="#ContactUs"
-                role="tab"
-              >
-                Contact Us
-              </a>
+              <a class="nav-link" href="#contactUs"> Contact Us </a>
             </li>
           </ul>
         </div>
         <div class="nav-icons col-sm-3">
-          <div class="d-flex flex-row justify-content-around mt-3 mb-3">
+          <div class="d-flex flex-row justify-content-around mb-3">
             <div class="dropdown">
               <img src="img/Icons/langIcon.png" alt="Lang" class="image-icon" />
               <div class="dropdown-content">
@@ -204,26 +160,27 @@
             </div>
           </div>
           <div class="d-flex flex-row justify-content-around mt-3">
-            <div class="dropdown">
-              <img
-                src="img/Icons/searchIcon.png"
-                alt="search"
-                class="image-icon"
-              />
-            </div>
+            <img
+              src="img/Icons/searchIcon.png"
+              alt="search"
+              class="image-icon"
+            />
+
             <div class="dropdown">
               <img src="img/Icons/CartIcon.png" alt="cart" class="image-icon" />
 
-              <div class="dropdown-content">
-                <div>Cart Card</div>
-              </div>
+              <div
+                class="dropdown-content d-flex flex-column CartNavModal"
+                style="color: #0038ff; font-size: 15px; width: 30vw"
+              ></div>
             </div>
+
             <div class="dropdown">
               <img src="img/Icons/FavIcon.png" alt="heart" class="image-icon" />
-
-              <div class="dropdown-content">
-                <div>Fav Card</div>
-              </div>
+              <div
+                class="dropdown-content d-flex flex-column FavNavModal"
+                style="color: #0038ff; font-size: 15px; width: 30vw"
+              ></div>
             </div>
           </div>
         </div>
@@ -244,7 +201,72 @@
         </div>
       </div>
     </div>
+    <div class="newCollection">
+      <img src="img/2ndPageBG.png" alt="bg" class="newCollectionBG" />
+      <span>New Collection</span>
+      <span>View our new collection for 2022 </span>
+    </div>
+    <span class="productText">Best seller items</span>
+    <section id="products" class="ProductsPage mt-5">
+      <span class="productGrey"></span>
+    </section>
+    <section id="aboutUs" class="aboutUsSection">
+      <div class="d-flex flex-wrap flex-row ">
+        <div class="d-flex flex-row flex-grow-1 flex-wrap">
+          <div class="col-sm-6 p-5" style="background: #8e8e8e">
+            <span>
+              Special offer <br />
+              on this cap
+            </span>
+            <h3><u>Shop Now!</u></h3>
+          </div>
+          <div class="col-sm-6">
+            <img src="img/bgF.png" alt="bg" class="bgImage" />
+          </div>
+        </div>
+        <div class="d-flex flex-row flex-grow-1 flex-wrap">
+          <div class="col-sm-6 p-5" style="background: #d9d9d9; color: #3f3f3f">
+            <span>
+              Special offer <br />
+              on this cap
+            </span>
+            <h3><u>Shop Now!</u></h3>
+          </div>
+          <div class="col-sm-6">
+            <img src="img/bgS.png" alt="bg" class="bgImage" />
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-row flex-wrap ">
+        <div class="d-flex flex-row  flex-grow-1 flex-wrap">
+          <div class="col-sm-6">
+            <img src="img/bgTh.png" alt="bg" class="bgImage" />
+          </div>
+          <div class="col-sm-6 p-5" style="background: #d9d9d9; color: #3f3f3f">
+            <span>
+              Special offer <br />
+              on this cap
+            </span>
+            <h3><u>Shop Now!</u></h3>
+          </div>
+        </div>
+        <div class="d-flex flex-row flex-grow-1 flex-wrap">
+          <div class="col-sm-6">
+            <img src="img/bgFourth.png" alt="bg" class="bgImage" />
+          </div>
+          <div class="col-sm-6 p-5" style="background: #8e8e8e">
+            <span>
+              Special offer <br />
+              on this cap
+            </span>
+            <h3><u>Shop Now!</u></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contactUs" class="h-100"> contactUs</section>
 
+    <script src="Products.js"></script>
     <script src="app.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
